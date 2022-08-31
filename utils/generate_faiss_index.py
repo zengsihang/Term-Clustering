@@ -122,7 +122,7 @@ def find_new_index(model_name_or_path, indices_path, similarity_path, embedding_
 def get_true_cosine_similarity(embeddings, indices):
     similarity = []
     for i in range(indices.shape[0]):
-        similarity.append(np.dot(embeddings[i], embeddings[indices[i]]))
+        similarity.append(np.dot(embeddings[indices[i]], embeddings[i].reshape(-1, 1)).reshape(-1))
     return np.array(similarity)
 
 if __name__ == "__main__":
