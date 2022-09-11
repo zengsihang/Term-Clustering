@@ -145,6 +145,11 @@ if __name__ == "__main__":
         type=str,
         help="Path to ner phrase2idx file"
     )
+    parser.add_argument(
+        "--exact",
+        action='store_true',
+        help="use exact knn"
+    )
     args = parser.parse_args()
     args.indices_path = args.save_dir + 'indices.npy'
     args.similarity_path = args.save_dir + 'similarity.npy'
@@ -155,5 +160,6 @@ if __name__ == "__main__":
         indices_path=args.indices_path,
         similarity_path=args.similarity_path,
         embedding_path=args.embedding_path,
-        ner_phrase2idx_path=args.phrase2idx_path
+        ner_phrase2idx_path=args.phrase2idx_path,
+        exact=args.exact
     )
