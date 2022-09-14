@@ -141,7 +141,7 @@ def laplacian(matrix, normalize=False):
     return l
 
 def transform(sim):
-    return np.exp(-(np.max(0.95-sim, 0))**2/0.15**2)
+    return np.exp(-(max(0.95-sim, 0))**2/0.15**2)
 
 def ratio_cut(terms_list, similarity, ratio):
     sim, _ = get_sim(terms_list, similarity)
