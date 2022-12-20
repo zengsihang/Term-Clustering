@@ -20,4 +20,5 @@
 8. `short_term_process.py`: We add back the short terms by assigning each of them to the cluster where one of the terms has the highest similarity with the short term.
 
 ## Figure
+![clustering](https://user-images.githubusercontent.com/34975104/208680655-75240f60-fe4d-4068-9310-6736d59427df.png)
 
