@@ -246,7 +246,8 @@ if __name__ == '__main__':
     )
     parser.add_argument(
             "--ratio",
-            type=float)
+            type=float,
+            default=5)
     args = parser.parse_args()
     args.indices_path = os.path.join(args.use_data_dir, 'indices.npy')
     args.similarity_path = os.path.join(args.use_data_dir, 'similarity.npy')
